@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/caja"
+        android:text="0"
+        android:textSize="36sp"
+        android:gravity="end"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:text="7" android:onClick="numero" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="8" android:onClick="numero" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="9" android:onClick="numero" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="÷" android:onClick="operador" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp" android:backgroundTint="#1565C0"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:text="4" android:onClick="numero" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="5" android:onClick="numero" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="6" android:onClick="numero" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="×" android:onClick="operador" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp" android:backgroundTint="#1565C0"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:text="1" android:onClick="numero" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="2" android:onClick="numero" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="3" android:onClick="numero" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="-" android:onClick="operador" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp" android:backgroundTint="#1565C0"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:text="0" android:onClick="numero" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="." android:onClick="punto" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp"/>
+        <Button android:text="C" android:onClick="limpiar" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp" android:backgroundTint="#C62828"/>
+        <Button android:text="+" android:onClick="operador" android:layout_weight="1" android:layout_width="0dp" android:layout_height="60dp" android:backgroundTint="#1565C0"/>
+    </LinearLayout>
+
+    <Button
+        android:text="="
+        android:onClick="igual"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#2E7D32"/>
+
+    <Button
+        android:text="Guardar en Memoria"
+        android:onClick="guardarMemoria"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#1565C0"/>
+
+    <Button
+        android:text="Volver"
+        android:onClick="volver"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#EF5350"/>
+
+</LinearLayout>

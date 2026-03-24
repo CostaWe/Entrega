@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- INFORMACIÓN PERSONAL -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información Personal"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etId"
+            android:hint="Tarjeta de Identidad"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/nombre"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/apellido"
+            android:hint="Apellido"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/telefono"
+            android:hint="Teléfono"
+            android:inputType="phone"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/direccion"
+            android:hint="Dirección"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- GUSTOS (RadioButtons generados dinámicamente en Java) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gustos (selecciona 1)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:layout_marginBottom="4dp"/>
+
+        <RadioGroup
+            android:id="@+id/grupoGustos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- PREFERENCIAS (RadioButtons generados dinámicamente en Java) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preferencias (selecciona 1)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:layout_marginBottom="4dp"/>
+
+        <RadioGroup
+            android:id="@+id/grupoPreferencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:text="Guardar Contacto"
+            android:onClick="guardar"
+            android:backgroundTint="#1565C0"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Volver"
+            android:onClick="volver"
+            android:backgroundTint="#C62828"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- BÚSQUEDA POR ID -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar contacto por ID"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/etBuscarId"
+            android:hint="Ingresa la Tarjeta de Identidad"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:text="Buscar"
+            android:onClick="buscarPorId"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- LISTA DE CONTACTOS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contactos guardados"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="4dp"/>
+
+        <ListView
+            android:id="@+id/listaContactos"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
+
+    </LinearLayout>
+</ScrollView>
