@@ -10,7 +10,6 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- INFORMACIÓN PERSONAL -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,7 +21,7 @@
 
         <EditText
             android:id="@+id/etId"
-            android:hint="Tarjeta de Identidad"
+            android:hint="Cedula"
             android:inputType="text"
             android:textColor="#000000"
             android:textColorHint="#888888"
@@ -70,37 +69,37 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"/>
 
-        <!-- GUSTOS (RadioButtons generados dinámicamente en Java) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gustos (selecciona 1)"
-            android:textSize="16sp"
+            android:text="Gustos (puedes elegir varios)"
+            android:textSize="14sp"
             android:textStyle="bold"
-            android:textColor="#1565C0"
+            android:textColor="#388E3C"
             android:layout_marginBottom="4dp"/>
 
-        <RadioGroup
-            android:id="@+id/grupoGustos"
+        <LinearLayout
+            android:id="@+id/contenedorGustos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"/>
 
-        <!-- PREFERENCIAS (RadioButtons generados dinámicamente en Java) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Preferencias (selecciona 1)"
-            android:textSize="16sp"
+            android:text="Preferencias (puedes elegir varias)"
+            android:textSize="14sp"
             android:textStyle="bold"
-            android:textColor="#1565C0"
+            android:textColor="#388E3C"
             android:layout_marginBottom="4dp"/>
 
-        <RadioGroup
-            android:id="@+id/grupoPreferencias"
+        <LinearLayout
+            android:id="@+id/contenedorPreferencias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="14dp"/>
 
         <Button
             android:text="Guardar Contacto"
@@ -120,7 +119,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <!-- BÚSQUEDA POR ID -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Ir a Calculadora"
+            android:onClick="irCalculadora"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2E7D32"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -133,7 +141,7 @@
 
         <EditText
             android:id="@+id/etBuscarId"
-            android:hint="Ingresa la Tarjeta de Identidad"
+            android:hint="Ingresa la Cedula"
             android:inputType="text"
             android:textColor="#000000"
             android:textColorHint="#888888"
@@ -150,7 +158,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"/>
 
-        <!-- LISTA DE CONTACTOS -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

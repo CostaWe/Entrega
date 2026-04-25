@@ -1,5 +1,6 @@
 package com.example.entrega;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ public class CalculadoraActivity extends AppCompatActivity {
     TextView caja;
     String operador = "";
     double num1 = 0;
-    double memoria = 0;        // Resultado guardado en memoria
+    double memoria = 0;
     boolean nuevoNumero = true;
 
     @Override
@@ -20,6 +21,14 @@ public class CalculadoraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
         caja = findViewById(R.id.caja);
+
+        Button btnIrAgenda = findViewById(R.id.btnIrAgenda);
+        btnIrAgenda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CalculadoraActivity.this, AgendaActivity.class));
+            }
+        });
     }
 
     public void numero(View v) {
@@ -73,7 +82,6 @@ public class CalculadoraActivity extends AppCompatActivity {
         }
     }
 
-    // Guarda el resultado actual en memoria y muestra Toast
     public void guardarMemoria(View v) {
         String texto = caja.getText().toString();
         if (!texto.isEmpty() && !texto.equals("0")) {

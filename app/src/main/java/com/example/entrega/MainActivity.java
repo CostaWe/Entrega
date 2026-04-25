@@ -16,23 +16,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        listaUsuarios = GestorDatos.cargarUsuarios(this);
+
         Button btnAdmin   = findViewById(R.id.btnAdmin);
         Button btnUsuario = findViewById(R.id.btnUsuario);
 
         btnAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AdminLoginActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, AdminLoginActivity.class));
             }
         });
 
         btnUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, UserLoginActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, UserLoginActivity.class));
             }
         });
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        GestorDatos.guardarUsuarios(this, listaUsuarios);
     }
 }

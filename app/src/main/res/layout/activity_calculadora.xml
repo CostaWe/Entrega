@@ -68,5 +68,12 @@
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#EF5350"/>
+    <Button
+        android:id="@+id/btnIrAgenda"
+        android:text="Ir a Agenda"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:backgroundTint="#2E7D32"/>
 
 </LinearLayout>

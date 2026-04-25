@@ -18,6 +18,7 @@ public class UserLoginActivity extends AppCompatActivity {
         final EditText etNombre     = findViewById(R.id.etUserUsername);
         final EditText etContrasena = findViewById(R.id.etUserPassword);
         Button btnLogin             = findViewById(R.id.btnUserLogin);
+        Button btnVolver            = findViewById(R.id.btnVolver);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,13 @@ public class UserLoginActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(UserLoginActivity.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

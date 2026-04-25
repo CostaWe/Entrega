@@ -20,6 +20,7 @@ public class AdminPanelActivity extends AppCompatActivity {
         final EditText etNombre     = findViewById(R.id.etNewUsername);
         final EditText etContrasena = findViewById(R.id.etNewPassword);
         Button btnRegistrar         = findViewById(R.id.btnRegisterUser);
+        Button btnVolver            = findViewById(R.id.btnVolver);
         tvUserList                  = findViewById(R.id.tvUserList);
 
         mostrarUsuarios();
@@ -48,11 +49,19 @@ public class AdminPanelActivity extends AppCompatActivity {
                 } else {
                     Usuario nuevoUsuario = new Usuario(nombre, contrasena);
                     MainActivity.listaUsuarios.add(nuevoUsuario);
+                    GestorDatos.guardarUsuarios(AdminPanelActivity.this, MainActivity.listaUsuarios);
                     Toast.makeText(AdminPanelActivity.this, "Usuario registrado: " + nombre, Toast.LENGTH_SHORT).show();
                     etNombre.setText("");
                     etContrasena.setText("");
                     mostrarUsuarios();
                 }
+            }
+        });
+
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
