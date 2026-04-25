@@ -9,12 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class UserWelcomeActivity extends AppCompatActivity {
 
+    String username;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_welcome);
 
-        String username    = getIntent().getStringExtra("username");
+        username = getIntent().getStringExtra("username");
         TextView tvWelcome = findViewById(R.id.tvWelcome);
         tvWelcome.setText("¡Hola, " + username + "!");
 
@@ -26,6 +28,7 @@ public class UserWelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserWelcomeActivity.this, AgendaActivity.class);
+                intent.putExtra("username", username);
                 startActivity(intent);
             }
         });
@@ -33,8 +36,7 @@ public class UserWelcomeActivity extends AppCompatActivity {
         btnCalculadora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserWelcomeActivity.this, CalculadoraActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(UserWelcomeActivity.this, CalculadoraActivity.class));
             }
         });
 
