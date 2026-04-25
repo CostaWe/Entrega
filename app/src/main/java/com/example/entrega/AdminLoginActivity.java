@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class AdminLoginActivity extends AppCompatActivity {
 
     private static final String ADMIN_USER = "admin";
-    private static final String ADMIN_PASS = "123";
+    private static final String ADMIN_PASS = "admin";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
